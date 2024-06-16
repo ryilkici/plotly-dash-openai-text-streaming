@@ -44,7 +44,7 @@ app.layout = dbc.Container([
 def update_output(n_clicks, prompt):
     if n_clicks > 0:
         response = client.chat.completions.create(
-            model=AZURE_OPENAI_GPT_MODEL,
+            model='MODEL_NAME',
             messages=[{"role": "user", "content": prompt}],
             stream=True
         )
