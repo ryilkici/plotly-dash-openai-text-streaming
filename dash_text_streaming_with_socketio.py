@@ -56,7 +56,7 @@ def display_status(n_clicks, prompt, socket_id):
         return no_update, []
     
     response = client.chat.completions.create(
-        model=AZURE_OPENAI_GPT_MODEL,
+        model='MODEL_NAME',
         messages=[{"role": "user", "content": prompt}],
         stream=True
     )
